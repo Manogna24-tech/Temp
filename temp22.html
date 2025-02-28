@@ -15,8 +15,8 @@
     <img src="assets/images/ball.png" width="200px" id="ball"/>
 
     <script>
-        let ball = document.getElementById("ball");
-        ball.style.position = "absolute";
+        let bucket = document.getElementById("bucket");
+        bucket.style.position = "absolute";
         let topPos = 0; // Initial top position
         let leftPos = 0; // Initial left position
 
@@ -31,8 +31,8 @@
                 topPos -= 5; // Move up
             }
 
-            ball.style.left = leftPos + "px";
-            ball.style.top = topPos + "px";
+            bucket.style.left = leftPos + "px";
+            bucket.style.top = topPos + "px";
         };
     </script>
 </body>
