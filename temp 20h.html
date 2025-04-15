@@ -6,13 +6,28 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="showcookies()">Show Cookies</button>
+    <button onclick="createCookie()">Create Cookies</button>
+    <button onclick="deleteCookie()">Delete Cookies</button>
+    <div id="divcookies"></div>
     <script>
-        //document.cookie="name=John; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/; domain=example.com; secure; SameSite=None";
+        function deleteCookie(){
+            document.cookie="name=;expires=Thu,01 Jan 1970 00:00:00 UTC";
+            document.cookie="email=;expires=Thu,01 Jan 1970 00:00:00 UTC";
+            document.cookie="pass=;expires=Thu,01 Jan 1970 00:00:00 UTC";
+            document.write(document.cookie);
+        }
+        function createCookie(){
         document.cookie="name=John;expires=Thu,18 Oct 2025 12:00:00 UTC";
         document.cookie="email=John@email.com;expires=Thu,18 Oct 2025 12:00:00 UTC";
         document.cookie="pass=1234;expires=Thu,18 Oct 2025 12:00:00 UTC";
+        document.write(document.cookie);
+        }
+        function showcookies(){
+            divcookies.innerHTML=document.cookie;
+}
 
 
-    </script>
+</script>
 </body>
 </html>
